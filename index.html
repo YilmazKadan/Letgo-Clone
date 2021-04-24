@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Swipper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Kayip Eşya</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h3>Kayıp Eşya</h3>
+            </div>
+            <div class="search-box">
+                <form action="">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="text-input search-input" placeholder="İlan ara..">
+                </form>
+            </div>
+            <nav class="navigation">
+                <a href="#" class="btn btn-pastel">İlan ver</a>
+                <a href="" id="register-btn" class="btn btn-bordered">Giriş/Kayıt</a>
+                <i class="fas fa-bars"></i>
+                <!-- User's navigation -->
+                <!-- <i class="fas fa-inbox"></i>
+                <i class="fas fa-bell"></i>
+                <img src="img/avatar.jpg" alt="" class="avatar-img"> -->
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER FINISH -->
+
+    <!-- REGISTER POPUP -->
+    <div class="popup-content popup-register">
+        <div class="popup-main">
+            <i class="fas fa-times"></i>
+            <div class="logo">
+                <h3>Kayıt Ol</h3>
+            </div>
+            <form action="" method="GET">
+                <div class="input-group">
+                    <span>Adınız:</span>
+                    <input type="text" class="text-input" name="name" placeholder="Adınızı giriniz">
+                </div>
+                <div class="input-group">
+                    <span>Soyadınız:</span>
+                    <input type="text" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+                </div>
+                <div class="input-group">
+                    <span>Telefon Numaranız:</span>
+                    <input type="text" class="text-input" name="name" placeholder="Telefon numaranızı giriniz">
+                </div>
+                <div class="input-group">
+                    <input type="submit" name="" class="btn" value="Kayıt Ol">
+                    <a href="" id="sign-in-btn" class="btn">Oturum Aç</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- REGISTER POPUP FINISH -->
+    <!-- SIGN-IN POPUP -->
+    <div class="popup-content popup-sign-in">
+        <div class="popup-main">
+            <i class="fas fa-times"></i>
+            <div class="logo">
+                <h3>Oturum Aç</h3>
+            </div>
+            <form action="" method="GET">
+                <div class="input-group">
+                    <span>Email:</span>
+                    <input type="email" class="text-input" required="required" name="name"
+                        placeholder="Adınızı giriniz">
+                </div>
+                <div class="input-group">
+                    <span>Şifre:</span>
+                    <input type="password" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+                </div>
+                <div class="input-group">
+                    <input type="submit" class="btn" value="Giriş Yap">
+                    <a href="#" onclick="registerPopupOpen()"> Kayıt Ol </a>
+                    <a href="#">Şifremi Unuttum</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- SIGN-IN POPUP FINISH -->
+    <section class="top-main">
+        <div class="container">
+            <div class="left">
+                <h1>Kayıp ettiğin eşyaların için üzülme, hemen bir kayıp ilanı oluştur</h1>
+                <div class="search-box">
+                    <form action="">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="text-input search-input " placeholder="İlan ara..">
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <img src="img/banner.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="last-posts">
+        <div class="container">
+            <div class="header">
+                <h3>Son İlanlar</h3>
+            </div>
+            <div class="posts">
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/harley-quinn-laptop-sticker.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/kolye.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/kolye2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/laptop.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499TL</span>
+                    </div>
+                </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499Tl</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="read-more">
+        <div class="container">
+            <a href="#" class="btn">Daha fazla yükle</a>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo logo-bottom">
+                    <h3>Kayıp Eşya</h3>
+                </div>
+                <nav class="navigation-bottom">
+                    <ul>
+                        <li>Kayip eşya hakkında</li>
+                        <li><a href="">Kayip eşya hakkında</a></li>
+                        <li><a href="">uygulamayı indir</a></li>
+                        <li><a href="">daha fazla bilgi</a></li>
+                    </ul>
+                </nav>
+                <nav class="navigation-bottom">
+                    <ul>
+                        <li>Destek</li>
+                        <li><a href="">Yardım</a></li>
+                        <li><a href="">Güvenlik önerilerimiz</a></li>
+                    </ul>
+                </nav>
+                <div class="select-language">
+                    <p>Ülke</p>
+                    <select name="select-language" id="">
+                        <option value="">Türkiye(Türkçe)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="social-links">
+                <nav class="social">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER FINISH -->
+</body>
+<!-- Swipper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+
+</html>
