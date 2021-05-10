@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Swipper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <title>Kayip Eşya</title>
+    <title>Letgo</title>
 </head>
 
 <body>
@@ -23,14 +25,15 @@
                 <h3><a href="index.html">LETGO</a></h3>
             </div>
             <div class="search-box">
-                <form action="singlepost.html">
+                <form action="">
                     <i class="fas fa-search"></i>
                     <input type="text" class="text-input search-input" placeholder="İlan ara..">
                 </form>
             </div>
             <nav class="navigation">
                 <a href="#" class="btn btn-pastel">İlan ver</a>
-                <a href="" data-popup-target = "#popup-register" id="register-btn" class="btn btn-bordered">Giriş/Kayıt</a>
+                <a href="" data-popup-target="#popup-register" id="register-btn"
+                    class="btn btn-bordered">Giriş/Kayıt</a>
                 <i id="bar-icon" class="fas fa-bars"></i>
                 <!-- User's navigation -->
                 <!-- <i class="fas fa-inbox"></i>
@@ -42,20 +45,20 @@
     <!-- HEADER FINISH -->
 
     <!-- LEFT NAVIGATON MENU-->
-        <div class="navigation-main">
-            <div class="info">
-                <img src="img/user.png" alt="" class="user-img">
-                <span data-popup-target="#popup-sign-in">Şimdi giriş yap</span>
-                <span>Giriş yapmadın</span>
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
-                    <li><a href="#"><i class="fas fa-book"></i>Hakkımızda</a></li>
-                    <li><a href="#"><i class="fas fa-phone"></i>İletişim</a></li>
-                </ul>
-            </nav>
+    <div class="navigation-main">
+        <div class="info">
+            <img src="img/user.png" alt="" class="user-img">
+            <span data-popup-target="#popup-sign-in">Şimdi giriş yap</span>
+            <span>Giriş yapmadın</span>
         </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>Hakkımızda</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i>İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
     <!-- LEFT NAVIGATION MENU FINISH -->
 
     <!-- REGISTER POPUP -->
@@ -79,7 +82,7 @@
             </div>
             <div class="input-group">
                 <input type="submit" name="" class="btn" value="Kayıt Ol">
-                <a href="" data-popup-target="#popup-sign-in" >Oturum Aç</a>
+                <a href="" data-popup-target="#popup-sign-in">Oturum Aç</a>
             </div>
         </form>
     </div>
@@ -128,30 +131,33 @@
         </form>
     </div>
     <!-- RECOVERY POPUP FINISH -->
-    <!-- TOP MAIN START -->
-    <section class="top-main">
+    <section class="filter">
         <div class="container">
-            <div class="left">
-                <h1>Kullanmadığın eşyaları sat, çevrendeki fırsatları keşfet!</h1>
-                <div class="search-box">
-                    <form action="">
-                        <i class="fas fa-search"></i>
-                        <input type="text" class="text-input search-input " placeholder="İlan ara..">
-                    </form>
-                </div>
+            <div class="header">
+                <h3>75.488 arama sonucu: İstanbul içindeki araba ilanları</h3>
             </div>
-            <div class="right">
-                <img src="img/banner.svg" alt="">
+            <div class="filters">
+                <select name="category" id="category">
+                    <option value="">Tümü</option>
+                    <option value="">Araba</option>
+                    <option value="">Cüzdan</option>
+                    <option value="">Elektronik</option>
+                    <option value="">Aksesuar</option>
+                </select>
+                <select name="situation" id="situation">
+                    <option value="">Aranıyor</option>
+                    <option value="">Bulundu</option>
+                </select>
+                <select name="sort" id="sort">
+                    <option value="">Yayınlanma Tarihi (Azalan)</option>
+                    <option value="">Yayınlanma Tarihi (Artan)</option>
+                </select>
             </div>
         </div>
     </section>
-    <!-- TOP MAIN FINISH -->
     <!-- POST SECTION START -->
     <section class="posts">
         <div class="container">
-            <div class="header">
-                <h3>Son İlanlar</h3>
-            </div>
             <div class="posts">
                 <div class="post">
                     <!-- Slider main container -->
@@ -159,9 +165,9 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide"><a href="singlepost.html"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></a></div>
-                            <div class="swiper-slide"><a href="singlepost.html"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></a></div>
-                            <div class="swiper-slide"><a href="singlepost.html"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></a></div>
+                            <div class="swiper-slide"><a href="search.html"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></a></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
                             ...
                         </div>
                         <!-- If we need pagination -->
@@ -377,10 +383,39 @@
                         <span class="fiyat">499Tl</span>
                     </div>
                 </div>
+                <div class="post">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/7b59f3575a6cecb03146cd4754bcf2f1.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/0af0d36eab4b02b83696c2f41e30a71f.jpeg" alt=""></div>
+                            <div class="swiper-slide"><img src="img/87d2fe629d5166d0b5d2bf3a9378ecc2.jpeg" alt=""></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <div class="footer">
+                        <span class="city">Adana - 0.2km</span>
+                        <h3 class="title">Fiyat düştü !!! Temiz heryşeyi....</h3>
+                        <span class="category">Diğer</span>
+                        <span class="fiyat">499Tl</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- POST SECTION FINISH -->
+    
     <!-- READ MORE START -->
     <div class="read-more">
         <div class="container">
@@ -397,8 +432,8 @@
                 </div>
                 <nav class="navigation-bottom">
                     <ul>
-                        <li>Kayip eşya hakkında</li>
-                        <li><a href="">Kayip eşya hakkında</a></li>
+                        <li>Letgo hakkında</li>
+                        <li><a href="">Letgo hakkında</a></li>
                         <li><a href="">uygulamayı indir</a></li>
                         <li><a href="">daha fazla bilgi</a></li>
                     </ul>
