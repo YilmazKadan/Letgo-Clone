@@ -12,11 +12,12 @@ $border_color:rgb(224,224,224);
 html{
     height: 100%;
 }
+
 body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 ul{
     list-style:none;
@@ -45,8 +46,36 @@ GLOBAL CLASSES
     margin-bottom: 5px;
     width: 100%;
     margin: 0px auto;
+    span{
+        font-size:19px;       
+    }
+    &.center{
+        align-items: center;
+    }
+    .select{
+        width: 200px;
+        height:30px;
+        font-size:20px;
+        cursor:pointer;
+    }
     *{
         margin-bottom: 10px;
+    }
+    input[type="file"]{
+       display: none;
+    }
+    .file-input-label{
+        background-color:$main_color;
+        color: white;
+        cursor: pointer;
+        padding: 5px 10px;
+        max-width: 150px;
+        text-align: center;
+        border-radius: 4px;
+    }
+    .uploaded-img{
+        height: auto;
+        max-width: 50%;
     }
 }
 .avatar-img{
@@ -71,6 +100,10 @@ GLOBAL CLASSES
     border-radius:32px;
     font-weight: 600;
     border:1px solid $main_color;
+    &.btn-mini{
+        width: 100px;
+        margin-left:auto;
+    }
     &:hover{
         color:$main_color;
         background-color: white;
@@ -134,6 +167,12 @@ GLOBAL CLASSES
     background-color: rgb(245, 245, 245);
     border:1px solid transparent;
     padding:5px 10px;
+    &.mini{
+        width: 200px;
+    }
+    &.middle{
+        width: 50%;
+    }
     &:focus{
         background-color: transparent;
         outline: 1px solid black;
@@ -147,7 +186,7 @@ GLOBAL CLASSES
         form{
             margin-top: 20px;
         }
-        z-index: 9;
+        z-index:10;
         width:400px;
         min-height: 250px;
         background-color:white;
@@ -175,15 +214,17 @@ GLOBAL CLASSES
     }
 
 .black-panel{
-    position:fixed;
+    position:absolute;
     top:0;
     bottom:0;
     left: 0;
     right:0;
+    max-width: 100%;
+    max-height: 100%;
     background-color:black;
     opacity: 0;
     pointer-events: none;
-    z-index: 9;
+    z-index:10;
     &.active{
         pointer-events: all;
         opacity: .8;
@@ -243,7 +284,7 @@ header.header{
     .navigation-main{
         transform: translateX(100%);
         position: fixed;
-        z-index: 9;
+        z-index:10;
         top:0;
         right: 0;
         background-color: white;
@@ -512,7 +553,6 @@ section.post-detail{
             min-width: 50%;
             img{
                 max-width: 100%;
-                min-height: 400px;
                 height: auto;
             }
         }
@@ -576,8 +616,7 @@ MESSAGES PAGE DESIGN
 */
 
 section.message{
-    margin-bottom: 100px;
-    margin-top:-50px;
+    margin-top: -60px;
     .container{
         display: flex;
         max-height: 500px;
@@ -626,6 +665,8 @@ section.message{
         .right{
             flex: 1;
             position: relative;
+            max-height: 100%;
+            background: white;
             .background{
                 position: absolute;
                 top:0;
@@ -724,6 +765,12 @@ section.message{
                 }
                 .message-inputs{
                     display: flex;
+                    align-items: center;
+                    padding:10px 0;
+                    border-top:1px solid $border_color;
+                    input{
+                        border-radius: 10px;    
+                    }
                 }
             }
 
@@ -731,7 +778,29 @@ section.message{
     }
 }
 
-
+/*
+    ADDPOST SECTION
+*/
+section.addpost{
+    margin-bottom: 100px;
+    .container{
+        form{
+           .group{
+              &:not(:last-child){
+                margin-bottom: 20px;
+              }
+               border:1px solid $border_color;
+               border-radius: 10px;
+               padding: 20px;
+               h4{
+                   text-align: center;
+                   text-transform: uppercase;
+                   margin-bottom: 30px;
+               }
+           }
+        }
+    }
+}
 /*  
 RESPONSIVE
 */
@@ -805,6 +874,14 @@ RESPONSIVE
             padding: 0;
             transform: translateX(0);
             transition: 300ms ease-in-out;
+            position: absolute;
+            right:0;
+            left:0;
+            top:150px;
+            bottom:0;
+            min-height: 80%;
+            z-index:9;
+            background-color:white;
             &.transform-left{
                 transform: translateX(-100%);
             }
@@ -821,6 +898,7 @@ RESPONSIVE
             .right{
                 min-width: 100%;
                 .message-area{
+                    height: 100%;
                     .message-header{
                         .left-info{
                             i{

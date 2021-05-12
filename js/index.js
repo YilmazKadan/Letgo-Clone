@@ -97,3 +97,12 @@ function chatTransform(position) {
     else
         return;
 }
+
+// UPLOAD IMAGE PREVIEW
+function loadImage (event,element){
+    const img = element.nextElementSibling;
+    if(event.target.files)
+        img.src = URL.createObjectURL(event.target.files[0]);
+    else
+        return;
+}

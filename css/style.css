@@ -62,8 +62,44 @@ GLOBAL CLASSES
   margin: 0px auto;
 }
 
+.input-group span {
+  font-size: 19px;
+}
+
+.input-group.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-group .select {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .input-group * {
   margin-bottom: 10px;
+}
+
+.input-group input[type="file"] {
+  display: none;
+}
+
+.input-group .file-input-label {
+  background-color: #695DE9;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  max-width: 150px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.input-group .uploaded-img {
+  height: auto;
+  max-width: 50%;
 }
 
 .avatar-img {
@@ -90,6 +126,11 @@ GLOBAL CLASSES
   border-radius: 32px;
   font-weight: 600;
   border: 1px solid #695DE9;
+}
+
+.btn.btn-mini {
+  width: 100px;
+  margin-left: auto;
 }
 
 .btn:hover {
@@ -159,13 +200,21 @@ GLOBAL CLASSES
   padding: 5px 10px;
 }
 
+.text-input.mini {
+  width: 200px;
+}
+
+.text-input.middle {
+  width: 50%;
+}
+
 .text-input:focus {
   background-color: transparent;
   outline: 1px solid black;
 }
 
 .popup {
-  z-index: 9;
+  z-index: 10;
   width: 400px;
   min-height: 250px;
   background-color: white;
@@ -207,15 +256,17 @@ GLOBAL CLASSES
 }
 
 .black-panel {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  max-width: 100%;
+  max-height: 100%;
   background-color: black;
   opacity: 0;
   pointer-events: none;
-  z-index: 9;
+  z-index: 10;
 }
 
 .black-panel.active {
@@ -299,7 +350,7 @@ header.header .container .navigation i:hover {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   position: fixed;
-  z-index: 9;
+  z-index: 10;
   top: 0;
   right: 0;
   background-color: white;
@@ -645,7 +696,6 @@ section.post-detail .container .left {
 
 section.post-detail .container .left img {
   max-width: 100%;
-  min-height: 400px;
   height: auto;
 }
 
@@ -726,8 +776,7 @@ MESSAGES PAGE DESIGN
 
 */
 section.message {
-  margin-bottom: 100px;
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 section.message .container {
@@ -803,6 +852,8 @@ section.message .container .right {
       -ms-flex: 1;
           flex: 1;
   position: relative;
+  max-height: 100%;
+  background: white;
 }
 
 section.message .container .right .background {
@@ -955,6 +1006,38 @@ section.message .container .right .message-area .message-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+section.message .container .right .message-area .message-inputs input {
+  border-radius: 10px;
+}
+
+/*
+    ADDPOST SECTION
+*/
+section.addpost {
+  margin-bottom: 100px;
+}
+
+section.addpost .container form .group {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+section.addpost .container form .group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+section.addpost .container form .group h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 /*  
@@ -1011,6 +1094,14 @@ RESPONSIVE
             transform: translateX(0);
     -webkit-transition: 300ms ease-in-out;
     transition: 300ms ease-in-out;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 150px;
+    bottom: 0;
+    min-height: 80%;
+    z-index: 9;
+    background-color: white;
   }
   section.message .container.transform-left {
     -webkit-transform: translateX(-100%);
@@ -1024,6 +1115,9 @@ RESPONSIVE
   }
   section.message .container .right {
     min-width: 100%;
+  }
+  section.message .container .right .message-area {
+    height: 100%;
   }
   section.message .container .right .message-area .message-header .left-info i {
     display: -webkit-box;

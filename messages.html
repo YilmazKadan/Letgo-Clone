@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -43,6 +43,94 @@
         </div>
     </header>
     <!-- HEADER FINISH -->
+      <!-- LEFT NAVIGATON MENU-->
+      <div class="navigation-main">
+        <div class="info">
+            <img src="img/user.png" alt="" class="user-img">
+            <span data-popup-target="#popup-sign-in">Şimdi giriş yap</span>
+            <span>Giriş yapmadın</span>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>Hakkımızda</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i>İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- LEFT NAVIGATION MENU FINISH -->
+
+    <!-- REGISTER POPUP -->
+    <div class="popup" id="popup-register">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Kayıt Ol</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Adınız:</span>
+                <input type="text" class="text-input" name="name" placeholder="Adınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Soyadınız:</span>
+                <input type="text" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Telefon Numaranız:</span>
+                <input type="text" class="text-input" name="name" placeholder="Telefon numaranızı giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" name="" class="btn" value="Kayıt Ol">
+                <a href="" data-popup-target="#popup-sign-in">Oturum Aç</a>
+            </div>
+        </form>
+    </div>
+    <!-- REGISTER POPUP FINISH -->
+    <!-- SIGN-IN POPUP -->
+    <div class="popup" id="popup-sign-in">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Oturum Aç</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Email:</span>
+                <input type="email" class="text-input" required="required" name="name" placeholder="Adınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Şifre:</span>
+                <input type="password" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" class="btn" value="Giriş Yap">
+                <a href="#" data-popup-target="#popup-register">Kayıt Ol </a>
+                <a href="#" data-popup-target="#popup-recovery">Şifremi Unuttum</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- SIGN-IN POPUP FINISH -->
+
+    <!-- RECOVERY POPUP -->
+    <div class="popup" id="popup-recovery">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Şifre Kurtar</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Email:</span>
+                <input type="email" class="text-input" required="required" name="name"
+                    placeholder="E-mailinizi giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" class="btn" value="Şifre Kurtar">
+                <a href="#" data-popup-target="#popup-sign-in">Giriş Yap </a>
+            </div>
+        </form>
+    </div>
+    <!-- RECOVERY POPUP FINISH -->
+
 
     <!-- MESSAGE SECTION -->
     <section class="message">
@@ -60,6 +148,33 @@
                     </div>
                     <div class="user active">
                         <img src="img/kolye.jpg" alt="" class="product-img">
+                        <div class="info">
+                            <span class="user-name">Yılmaz Kadan</span>
+                            <span class="product-name">Çok temiz gitar</span>
+                            <span class="message-date">5 gün önce</span>
+                        </div>
+                        <img src="img/avatar.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div class="user">
+                        <img src="img/laptop.jpg" alt="" class="product-img">
+                        <div class="info">
+                            <span class="user-name">Yılmaz Kadan</span>
+                            <span class="product-name">Çok temiz gitar</span>
+                            <span class="message-date">5 gün önce</span>
+                        </div>
+                        <img src="img/avatar.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div class="user">
+                        <img src="img/laptop.jpg" alt="" class="product-img">
+                        <div class="info">
+                            <span class="user-name">Yılmaz Kadan</span>
+                            <span class="product-name">Çok temiz gitar</span>
+                            <span class="message-date">5 gün önce</span>
+                        </div>
+                        <img src="img/avatar.jpg" alt="" class="avatar-img">
+                    </div>
+                    <div class="user">
+                        <img src="img/laptop.jpg" alt="" class="product-img">
                         <div class="info">
                             <span class="user-name">Yılmaz Kadan</span>
                             <span class="product-name">Çok temiz gitar</span>
@@ -203,6 +318,33 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="message message-me">
+                            <div class="message-box">
+                                <span>Evet, halen satılık</span>
+                                <div class="info">
+                                    <span>4 gün önce</span>
+                                    <i class="far fa-eye "></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message message-me">
+                            <div class="message-box">
+                                <span>Evet, halen satılık</span>
+                                <div class="info">
+                                    <span>4 gün önce</span>
+                                    <i class="far fa-eye "></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message message-me">
+                            <div class="message-box">
+                                <span>Evet, halen satılık</span>
+                                <div class="info">
+                                    <span>4 gün önce</span>
+                                    <i class="far fa-eye "></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="message-inputs">
                         <input type="text" class="text-input">
@@ -213,142 +355,6 @@
         </div>
     </section>
     <!-- MESSAGE SECTION FINISH -->
-
-    <!-- LEFT NAVIGATON MENU-->
-    <div class="navigation-main">
-        <div class="info">
-            <img src="img/user.png" alt="" class="user-img">
-            <span data-popup-target="#popup-sign-in">Şimdi giriş yap</span>
-            <span>Giriş yapmadın</span>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
-                <li><a href="#"><i class="fas fa-book"></i>Hakkımızda</a></li>
-                <li><a href="#"><i class="fas fa-phone"></i>İletişim</a></li>
-            </ul>
-        </nav>
-    </div>
-    <!-- LEFT NAVIGATION MENU FINISH -->
-
-    <!-- REGISTER POPUP -->
-    <div class="popup" id="popup-register">
-        <i class="fas fa-times" data-close-popup></i>
-        <div class="logo">
-            <h3>Kayıt Ol</h3>
-        </div>
-        <form action="" method="GET">
-            <div class="input-group">
-                <span>Adınız:</span>
-                <input type="text" class="text-input" name="name" placeholder="Adınızı giriniz">
-            </div>
-            <div class="input-group">
-                <span>Soyadınız:</span>
-                <input type="text" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
-            </div>
-            <div class="input-group">
-                <span>Telefon Numaranız:</span>
-                <input type="text" class="text-input" name="name" placeholder="Telefon numaranızı giriniz">
-            </div>
-            <div class="input-group">
-                <input type="submit" name="" class="btn" value="Kayıt Ol">
-                <a href="" data-popup-target="#popup-sign-in">Oturum Aç</a>
-            </div>
-        </form>
-    </div>
-    <!-- REGISTER POPUP FINISH -->
-    <!-- SIGN-IN POPUP -->
-    <div class="popup" id="popup-sign-in">
-        <i class="fas fa-times" data-close-popup></i>
-        <div class="logo">
-            <h3>Oturum Aç</h3>
-        </div>
-        <form action="" method="GET">
-            <div class="input-group">
-                <span>Email:</span>
-                <input type="email" class="text-input" required="required" name="name" placeholder="Adınızı giriniz">
-            </div>
-            <div class="input-group">
-                <span>Şifre:</span>
-                <input type="password" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
-            </div>
-            <div class="input-group">
-                <input type="submit" class="btn" value="Giriş Yap">
-                <a href="#" data-popup-target="#popup-register">Kayıt Ol </a>
-                <a href="#" data-popup-target="#popup-recovery">Şifremi Unuttum</a>
-            </div>
-        </form>
-    </div>
-    </div>
-    <!-- SIGN-IN POPUP FINISH -->
-
-    <!-- RECOVERY POPUP -->
-    <div class="popup" id="popup-recovery">
-        <i class="fas fa-times" data-close-popup></i>
-        <div class="logo">
-            <h3>Şifre Kurtar</h3>
-        </div>
-        <form action="" method="GET">
-            <div class="input-group">
-                <span>Email:</span>
-                <input type="email" class="text-input" required="required" name="name"
-                    placeholder="E-mailinizi giriniz">
-            </div>
-            <div class="input-group">
-                <input type="submit" class="btn" value="Şifre Kurtar">
-                <a href="#" data-popup-target="#popup-sign-in">Giriş Yap </a>
-            </div>
-        </form>
-    </div>
-    <!-- RECOVERY POPUP FINISH -->
-
-    <!-- MESSAGE SECTION -->
-    <section class="messages">
-        <div class="container"></div>
-    </section>
-    <!-- MESSAGE SECTION FINISH -->
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="logo logo-bottom">
-                    <h3>LETGO</h3>
-                </div>
-                <nav class="navigation-bottom">
-                    <ul>
-                        <li>LETGO hakkında</li>
-                        <li><a href="">LETGO hakkında</a></li>
-                        <li><a href="">uygulamayı indir</a></li>
-                        <li><a href="">daha fazla bilgi</a></li>
-                    </ul>
-                </nav>
-                <nav class="navigation-bottom">
-                    <ul>
-                        <li>Destek</li>
-                        <li><a href="">Yardım</a></li>
-                        <li><a href="">Güvenlik önerilerimiz</a></li>
-                    </ul>
-                </nav>
-                <div class="select-language">
-                    <p>Ülke</p>
-                    <select name="select-language" id="">
-                        <option value="">Türkiye(Türkçe)</option>
-                    </select>
-                </div>
-            </div>
-            <div class="social-links">
-                <nav class="social">
-                    <ul>
-                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER FINISH -->
 </body>
 <!-- Swipper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

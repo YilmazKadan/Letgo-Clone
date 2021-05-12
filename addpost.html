@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Swipper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Letgo</title>
+</head>
+
+<body>
+    <div class="black-panel"></div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h3><a href="index.html">LETGO</a></h3>
+            </div>
+            <div class="search-box">
+                <form action="">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="text-input search-input" placeholder="İlan ara..">
+                </form>
+            </div>
+            <nav class="navigation">
+                <a href="#" class="btn btn-pastel">İlan ver</a>
+                <a href="" data-popup-target="#popup-register" id="register-btn"
+                    class="btn btn-bordered">Giriş/Kayıt</a>
+                <i id="bar-icon" class="fas fa-bars"></i>
+                <!-- User's navigation -->
+                <!-- <i class="fas fa-inbox"></i>
+                <i class="fas fa-bell"></i>
+                <img src="img/avatar.jpg" alt="" class="avatar-img"> -->
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER FINISH -->
+
+    <!-- LEFT NAVIGATON MENU-->
+    <div class="navigation-main">
+        <div class="info">
+            <img src="img/user.png" alt="" class="user-img">
+            <span data-popup-target="#popup-sign-in">Şimdi giriş yap</span>
+            <span>Giriş yapmadın</span>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
+                <li><a href="#"><i class="fas fa-book"></i>Hakkımızda</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i>İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- LEFT NAVIGATION MENU FINISH -->
+
+    <!-- REGISTER POPUP -->
+    <div class="popup" id="popup-register">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Kayıt Ol</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Adınız:</span>
+                <input type="text" class="text-input" name="name" placeholder="Adınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Soyadınız:</span>
+                <input type="text" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Telefon Numaranız:</span>
+                <input type="text" class="text-input" name="name" placeholder="Telefon numaranızı giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" name="" class="btn" value="Kayıt Ol">
+                <a href="" data-popup-target="#popup-sign-in">Oturum Aç</a>
+            </div>
+        </form>
+    </div>
+    <!-- REGISTER POPUP FINISH -->
+    <!-- SIGN-IN POPUP -->
+    <div class="popup" id="popup-sign-in">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Oturum Aç</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Email:</span>
+                <input type="email" class="text-input" required="required" name="name" placeholder="Adınızı giriniz">
+            </div>
+            <div class="input-group">
+                <span>Şifre:</span>
+                <input type="password" class="text-input" name="surname" placeholder="Soyadınızı giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" class="btn" value="Giriş Yap">
+                <a href="#" data-popup-target="#popup-register">Kayıt Ol </a>
+                <a href="#" data-popup-target="#popup-recovery">Şifremi Unuttum</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- SIGN-IN POPUP FINISH -->
+
+    <!-- RECOVERY POPUP -->
+    <div class="popup" id="popup-recovery">
+        <i class="fas fa-times" data-close-popup></i>
+        <div class="logo">
+            <h3>Şifre Kurtar</h3>
+        </div>
+        <form action="" method="GET">
+            <div class="input-group">
+                <span>Email:</span>
+                <input type="email" class="text-input" required="required" name="name"
+                    placeholder="E-mailinizi giriniz">
+            </div>
+            <div class="input-group">
+                <input type="submit" class="btn" value="Şifre Kurtar">
+                <a href="#" data-popup-target="#popup-sign-in">Giriş Yap </a>
+            </div>
+        </form>
+    </div>
+    <!-- RECOVERY POPUP FINISH -->
+
+    <!-- SECTION ADD POST -->
+    <section class="addpost">
+        <div class="container">
+            <form action="">
+                <div class="group">
+                    <h4>GENEL BİLGİLER</h4>
+                    <div class="input-group">
+                        <span>İlan Başlığı:</span>
+                        <input type="text" class="text-input middle" required="required" name="name"
+                            placeholder="İlan başlığı giriniz">
+                    </div>
+                    <div class="input-group">
+                        <span>İlan İçeriği:</span>
+                        <textarea name="" id="ckeditor1" class="ckeditor"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span>Ürün Fotoğrafı giriniz:</span>
+                        <label class="file-input-label" for="file-input">Fotoğraf seç</label>
+                        <input id="file-input"  onchange="loadImage(event,this)" type="file" name="file" class="file-input file-image">
+                        <img src="" alt="" class="uploaded-img">
+                    </div>
+                   
+                </div>
+                <div class="group">
+                    <h4>Adres Bilgileri</h4>
+                    <div class="input-group ">
+                        <span>Şehir:</span>
+                        <select name="city" class="select" id="">
+                            <option value="34">İstanbul</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <span>İlçe:</span>
+                        <select name="city" class="select" id="">
+                            <option value="34">İstanbul</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group">
+                    <h4>Kategori</h4>
+                    <div class="input-group ">
+                        <span>Kategori:</span>
+                        <select name="category" class="select" id="">
+                            <option value="20">Ziynet</option>
+                        </select>
+                        <span>Alt Kategori:</span>
+                        <select name="category" class="select" id="">
+                            <option value="20">Altın</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="submit" name="" class="btn btn-mini" value="Yayınla">
+        
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- SECTION ADD POST FINISH-->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="logo logo-bottom">
+                    <h3>LETGO</h3>
+                </div>
+                <nav class="navigation-bottom">
+                    <ul>
+                        <li>Letgo hakkında</li>
+                        <li><a href="">Letgo hakkında</a></li>
+                        <li><a href="">uygulamayı indir</a></li>
+                        <li><a href="">daha fazla bilgi</a></li>
+                    </ul>
+                </nav>
+                <nav class="navigation-bottom">
+                    <ul>
+                        <li>Destek</li>
+                        <li><a href="">Yardım</a></li>
+                        <li><a href="">Güvenlik önerilerimiz</a></li>
+                    </ul>
+                </nav>
+                <div class="select-language">
+                    <p>Ülke</p>
+                    <select name="select-language" id="">
+                        <option value="">Türkiye(Türkçe)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="social-links">
+                <nav class="social">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER FINISH -->
+</body>
+<!-- Swipper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script src="plugin/ckeditor/ckeditor.js"></script>
+
+</html>
