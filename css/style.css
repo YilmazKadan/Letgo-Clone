@@ -520,12 +520,13 @@ section.posts .container .posts .post {
 
 section.posts .container .posts .post .swiper-container {
   height: 75%;
-  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 section.posts .container .posts .post .swiper-container img {
   width: 100%;
-  max-width: 100%;
+  min-width: 100%;
   height: 100%;
 }
 
@@ -543,7 +544,8 @@ section.posts .container .posts .post .footer {
   font-weight: 600;
 }
 
-section.posts .container .posts .post .footer span, section.posts .container .posts .post .footer h3 {
+section.posts .container .posts .post .footer span,
+section.posts .container .posts .post .footer h3 {
   margin-bottom: 9px;
 }
 
